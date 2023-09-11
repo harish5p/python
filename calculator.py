@@ -8,8 +8,8 @@ window.geometry('500x500')
 # Inputs
 
 # Entry Box
-c = Entry(window, width=50, borderwidth=5)
-c.place(x=0, y=0)
+e = Entry(window, width=50, borderwidth=5)
+e.place(x=0, y=0)
 
 # Buttons
 
@@ -53,23 +53,78 @@ b.place(x=10, y=240)
 # OPERATORS
 
 
-def add()
+def add():
+    n1 = e.get()
+    global oper
+    oper = 'addition'
+    global i
+    i = int(n1)
+    e.delete(0, END)
 
 
-b = Button(window, text='+', width=12)
+b = Button(window, text='+', width=12, command=add)
 b.place(x=80, y=240)
 
-b = Button(window, text='-', width=12)
+
+def subt():
+    n1 = e.get()
+    global oper
+    oper = 'subtraction'
+    global i
+    i = int(n1)
+    e.delete(0, END)
+
+
+b = Button(window, text='-', width=12, command=subt)
 b.place(x=170, y=240)
 
-b = Button(window, text='*', width=12)
+
+def mult():
+    n1 = e.get()
+    global oper
+    oper = 'multiplication'
+    global i
+    i = int(n1)
+    e.delete(0, END)
+
+
+b = Button(window, text='*', width=12, command=mult)
 b.place(x=10, y=300)
 
-b = Button(window, text='/', width=12)
+
+def divi():
+    n1 = e.get()
+    global oper
+    oper = 'division'
+    global i
+    i = int(n1)
+    e.delete(0, END)
+
+
+b = Button(window, text='/', width=12, command=divi)
 b.place(x=80, y=300)
+
+
+def equalto():
+    n2 = e.get()
+    e.delete(0, END)
+    if oper == "addition":
+        e.insert(0, i + int(n2))
+    elif oper == "subtraction":
+        e.insert(0, i - int(n2))
+    elif oper == "multiplication":
+        e.insert(0, i * int(n2))
+    elif oper == "division":
+        e.insert(0, i / int(n2))
+
 
 b = Button(window, text='=', width=12)
 b.place(x=170, y=300)
+
+
+def clear():
+    e.delete(0, END)
+
 
 b = Button(window, text='clear', width=12)
 b.place(x=10, y=350)
