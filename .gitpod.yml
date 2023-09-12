@@ -7,3 +7,6 @@ ports:
     onOpen: ignore
   - port: 35900
     onOpen: ignore
+
+tasks:
+  - command: pip install -r requirements.txt
