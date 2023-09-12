@@ -1,12 +1,9 @@
-image:
-    file: .gitpod.Dockerfile
+image: gitpod/workspace-full-vnc
 
-# This will expose all necessary ports needed for your VNC image
 ports:
-    - port: 6080
-      onOpen: open-preview
-    - port: 5900
-      onOpen: ignore
-    - port: 35900
-      onOpen: ignore
-
+  - port: 6080
+    onOpen: open-preview
+  - port: 5900
+    onOpen: ignore
+  - port: 35900
+    onOpen: ignore
