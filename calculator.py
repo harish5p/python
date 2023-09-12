@@ -1,6 +1,7 @@
 # import
 from tkinter import *
 
+
 # GUI interaction
 window = Tk()
 window.geometry('500x500')
@@ -8,7 +9,7 @@ window.geometry('500x500')
 # Inputs
 
 # Entry Box
-e = Entry(window, width=50, borderwidth=5)
+e = Entry(window, width=56,  borderwidth=5  )
 e.place(x=0, y=0)
 
 # Buttons
@@ -18,36 +19,38 @@ def click(num):
     result = e.get()
     e.delete(0, END)
     e.insert(0, str(result) + str(num))
+    
+WIDTH = 5
 
 
-b = Button(window, text='1', width=12, command=lambda: click(1))
+b = Button(window, text='1', width=WIDTH, command=lambda: click(1))
 b.place(x=10, y=60)
 
-b = Button(window, text='2', width=12, command=lambda: click(2))
-b.place(x=80, y=60)
+b = Button(window, text='2', width=WIDTH, command=lambda: click(2))
+b.place(x=90, y=60)
 
-b = Button(window, text='3', width=12, command=lambda: click(3))
+b = Button(window, text='3', width=WIDTH, command=lambda: click(3))
 b.place(x=170, y=60)
 
-b = Button(window, text='4', width=12, command=lambda: click(4))
+b = Button(window, text='4', width=WIDTH, command=lambda: click(4))
 b.place(x=10, y=120)
 
-b = Button(window, text='5', width=12, command=lambda: click(5))
-b.place(x=80, y=120)
+b = Button(window, text='5', width=WIDTH, command=lambda: click(5))
+b.place(x=90, y=120)
 
-b = Button(window, text='6', width=12, command=lambda: click(6))
+b = Button(window, text='6', width=WIDTH, command=lambda: click(6))
 b.place(x=170, y=120)
 
-b = Button(window, text='7', width=12, command=lambda: click(7))
+b = Button(window, text='7', width=WIDTH, command=lambda: click(7))
 b.place(x=10, y=180)
 
-b = Button(window, text='8', width=12,  command=lambda: click(8))
-b.place(x=80, y=180)
+b = Button(window, text='8', width=WIDTH,  command=lambda: click(8))
+b.place(x=90, y=180)
 
-b = Button(window, text='9', width=12, command=lambda: click(9))
+b = Button(window, text='9', width=WIDTH, command=lambda: click(9))
 b.place(x=170, y=180)
 
-b = Button(window, text='0', width=12, command=lambda: click(0))
+b = Button(window, text='0', width=WIDTH, command=lambda: click(0))
 b.place(x=10, y=240)
 
 # OPERATORS
@@ -62,8 +65,8 @@ def add():
     e.delete(0, END)
 
 
-b = Button(window, text='+', width=12, command=add)
-b.place(x=80, y=240)
+b = Button(window, text='+', width=WIDTH, command=add)
+b.place(x=90, y=240)
 
 
 def subt():
@@ -75,7 +78,7 @@ def subt():
     e.delete(0, END)
 
 
-b = Button(window, text='-', width=12, command=subt)
+b = Button(window, text='-', width=WIDTH, command=subt)
 b.place(x=170, y=240)
 
 
@@ -88,7 +91,7 @@ def mult():
     e.delete(0, END)
 
 
-b = Button(window, text='*', width=12, command=mult)
+b = Button(window, text='*', width=WIDTH, command=mult)
 b.place(x=10, y=300)
 
 
@@ -101,8 +104,8 @@ def divi():
     e.delete(0, END)
 
 
-b = Button(window, text='/', width=12, command=divi)
-b.place(x=80, y=300)
+b = Button(window, text='/', width=WIDTH, command=divi)
+b.place(x=90, y=300)
 
 
 def equalto():
@@ -118,7 +121,7 @@ def equalto():
         e.insert(0, i / int(n2))
 
 
-b = Button(window, text='=', width=12)
+b = Button(window, text='=', width=WIDTH, command=equalto)
 b.place(x=170, y=300)
 
 
@@ -126,7 +129,7 @@ def clear():
     e.delete(0, END)
 
 
-b = Button(window, text='clear', width=12)
+b = Button(window, text='clear', width=WIDTH, command=clear)
 b.place(x=10, y=350)
 
 # mainloop
