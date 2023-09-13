@@ -3,3 +3,4 @@ pillow
 flask
 beautifulsoup4
 lxml
+selenium==3.141.0
