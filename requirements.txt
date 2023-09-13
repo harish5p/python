@@ -1,2 +1,5 @@
 Django==4.2.5
 pillow
+flask
+beautifulsoup4
+lxml
